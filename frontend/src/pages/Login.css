@@ -1,0 +1,265 @@
+/* =============================================
+   Auth Pages — Dashboard Professional Theme
+   =============================================
+   Split Panel | Dashboard Colors | 80% Width
+   ============================================= */
+
+.auth-page.split-screen {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f8faf7; /* Dashboard background */
+  padding: 20px;
+  font-family: 'Inter', -apple-system, sans-serif;
+  box-sizing: border-box;
+}
+
+.auth-container {
+  display: flex;
+  width: 82vw;
+  max-width: 1200px;
+  height: auto;
+  min-height: 580px; /* Reduced min-height */
+  max-height: 92vh; /* Strict max-height */
+  background: white;
+  border-radius: 40px;
+  overflow: hidden;
+  box-shadow: 0 40px 100px -20px rgba(0, 0, 0, 0.12);
+  animation: slideUpFade 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ── Left Side: Clean White Panel ────────────── */
+.auth-hero {
+  flex: 1.2;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px; /* Reduced padding */
+  position: relative;
+}
+
+.auth-logo.top-left {
+  position: absolute;
+  top: 32px;
+  left: 32px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.auth-logo-img {
+  height: 64px;
+  width: auto;
+  object-fit: contain;
+}
+
+.auth-hero-illustration {
+  width: 100%;
+  max-width: 320px; /* Smaller illustration to save space */
+  height: auto;
+}
+
+/* ── Right Side: Sage Green Form Panel ───────── */
+.auth-content {
+  flex: 0.8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px; /* Reduced padding */
+  background: #729762; 
+  color: #ffffff;
+  position: relative;
+  overflow-y: hidden; /* Prevent scrolling */
+}
+
+.auth-form-container {
+  width: 100%;
+  max-width: 360px;
+  display: flex;
+  flex-direction: column;
+}
+
+.auth-header {
+  margin-bottom: 24px; /* Reduced margin */
+  text-align: center;
+}
+
+.auth-header h1 {
+  font-size: 2.75rem;
+  font-weight: 900;
+  color: #ffffff;
+  margin-bottom: 0;
+  letter-spacing: -0.05em;
+  line-height: 1;
+}
+
+/* ── Form Elements ───────────────────────────── */
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px; /* Tightened gap */
+}
+
+.auth-field label {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 800;
+  color: #ffffff; 
+  margin-bottom: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.auth-input-wrapper {
+  position: relative;
+  border-radius: 50px;
+  padding: 1px;
+  background: #ffffff; 
+  transition: all 0.3s ease;
+}
+
+.auth-input-wrapper input {
+  width: 100%;
+  padding: 14px 24px; /* Reverted padding */
+  background: transparent;
+  border: none;
+  border-radius: 50px;
+  font-family: inherit;
+  font-size: 1rem;
+  color: #1a2714;
+  transition: all 0.2s ease;
+}
+
+.auth-input-wrapper input::placeholder {
+  color: rgba(26, 39, 20, 0.6);
+}
+
+/* ── White Button (Matches Frames) ──────────── */
+.auth-submit {
+  width: 100%;
+  padding: 16px; /* Reverted padding */
+  background: #ffffff; 
+  color: #1a2714; 
+  border: none;
+  border-radius: 50px;
+  font-size: 1rem; /* Reverted size */
+  font-weight: 900;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.auth-submit:hover:not(:disabled) {
+  background: #f8faf7;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.auth-submit:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* ── Footer Elements ─────────────────────────── */
+.auth-forgot {
+  display: block;
+  text-align: center;
+  font-size: 0.875rem;
+  color: #ffffff;
+  text-decoration: none;
+  margin-top: 12px;
+  font-weight: 700;
+}
+
+.auth-divider {
+  margin: 18px 0;
+  text-align: center;
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.auth-divider::before,
+.auth-divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.auth-social-grid {
+  display: flex;
+  justify-content: center;
+}
+
+.social-btn {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.auth-switch {
+  text-align: center;
+  margin-top: 24px;
+  font-size: 0.875rem;
+  color: #ffffff;
+  opacity: 0.9;
+}
+
+.auth-switch a {
+  color: #ffffff;
+  font-weight: 800;
+  text-decoration: none;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+  margin-left: 5px;
+}
+
+.auth-switch a:hover {
+  border-bottom-color: #ffffff;
+}
+
+.auth-error {
+  background: rgba(239, 68, 68, 0.1);
+  color: #fca5a5;
+  padding: 10px;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  font-size: 0.8125rem;
+  text-align: center;
+}
+
+/* ── Animations ──────────────────────────────── */
+@keyframes slideUpFade {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Responsive ──────────────────────────────── */
+@media (max-width: 1000px) {
+  .auth-hero {
+    display: none;
+  }
+  .auth-container {
+    width: 90vw;
+    max-width: 420px;
+    height: auto;
+    max-height: 95vh;
+  }
+}

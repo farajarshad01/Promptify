@@ -1,0 +1,184 @@
+/* =============================================
+   Promptify — Global Design System
+   =============================================
+   Light theme with Lighter Sage Green (#C1E1AE) accents.
+   Font: Inter from Google Fonts.
+   ============================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+/* ── Design Tokens ───────────────────────────── */
+:root {
+  --primary: #6EA451;
+  --primary-hover: #5d8c44;
+  --primary-light: rgba(110, 164, 81, 0.15);
+  --primary-glow: rgba(110, 164, 81, 0.1);
+  
+  --bg-main: #f8faf7;
+  --bg-base: #ffffff;
+  --bg-card: #ffffff;
+  --bg-card-hover: #f1f5f0;
+  --bg-input: #ffffff;
+  
+  --text-main: #1a2714;
+  --text-primary: #1a2714;
+  --text-secondary: #4a5c44;
+  --text-muted: #6b7c61;
+  --text-tertiary: #8a9b83;
+  --text-light: #9ca3af;
+  
+  --border: #e2e8df;
+  --border-default: #e2e8df;
+  --border-hover: #c1ccbd;
+  --border-subtle: #edf2eb;
+  
+  --radius-lg: 32px;
+  --radius-md: 20px;
+  --radius-sm: 12px;
+  --radius-full: 9999px;
+  
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 12px 40px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 20px 50px rgba(0, 0, 0, 0.1);
+  --shadow-glow: 0 4px 15px rgba(110, 164, 81, 0.2);
+  --shadow-glow-strong: 0 8px 25px rgba(110, 164, 81, 0.3);
+
+  --transition-fast: 0.15s ease;
+  --transition-base: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 0.4s ease;
+
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-2xl: 48px;
+  --space-3xl: 64px;
+
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-md: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 2rem;
+
+  --status-deployed: #10b981;
+  --status-deployed-bg: #ecfdf5;
+  --status-draft: #f59e0b;
+  --status-draft-bg: #fffbeb;
+  --status-failed: #ef4444;
+  --status-failed-bg: #fef2f2;
+
+  --glass-bg: rgba(255, 255, 255, 0.7);
+  --glass-border: rgba(255, 255, 255, 0.3);
+  --glass-blur: blur(12px);
+}
+
+/* ── Dark Mode Tokens ────────────────────────── */
+body.dark-mode {
+  --bg-main: #0c1208;
+  --bg-card: #151e10;
+  --bg-card-hover: #1e2a16;
+  --bg-input: #1c2718;
+  
+  --text-main: #f5f7f0;
+  --text-primary: #f5f7f0;
+  --text-secondary: #d1d9cc;
+  --text-muted: #aab8a1;
+  --text-tertiary: #8a9b83;
+  --text-light: #6b7c61;
+  
+  --border: #25331e;
+  --border-default: #25331e;
+  --border-hover: #3a4d31;
+  --border-subtle: #1c2718;
+  
+  --shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 12px 50px rgba(0, 0, 0, 0.5);
+  
+  --primary-light: rgba(110, 164, 81, 0.25);
+  --primary-glow: rgba(110, 164, 81, 0.15);
+
+  --status-deployed-bg: rgba(16, 185, 129, 0.15);
+  --status-draft-bg: rgba(245, 158, 11, 0.15);
+  --status-failed-bg: rgba(239, 68, 68, 0.15);
+
+  --glass-bg: rgba(21, 30, 16, 0.7);
+  --glass-border: rgba(255, 255, 255, 0.1);
+}
+
+/* ── Reset & Base ────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  line-height: 1.6;
+  min-height: 100vh;
+  overflow-x: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+/* ── Typography ──────────────────────────────── */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+}
+
+a {
+  color: var(--text-main);
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+a:hover { color: var(--primary-hover); }
+
+/* ── Scrollbar ───────────────────────────────── */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 9999px; }
+::-webkit-scrollbar-thumb:hover { background: var(--primary); }
+
+/* ── Utilities ───────────────────────────────── */
+.premium-shadow { box-shadow: 0 10px 40px rgba(157, 193, 131, 0.12); }
+.glass-effect { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.3); }
+body.dark-mode .glass-effect { background: rgba(21, 30, 16, 0.7); border-color: rgba(255, 255, 255, 0.1); }
+
+/* ── Interactive Elements ────────────────────── */
+button {
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+button:active { transform: scale(0.96); }
+
+input, textarea {
+  transition: all 0.2s ease;
+}
+
+/* ── Animations ──────────────────────────────── */
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes fadeInUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes fadeInDown { from { opacity: 0; transform: translateY(-20px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes scaleIn { from { opacity: 0; transform: scale(0.95); } to { opacity: 1; transform: scale(1); } }
+@keyframes slideInRight { from { opacity: 0; transform: translateX(30px); } to { opacity: 1; transform: translateX(0); } }
+@keyframes spin { to { transform: rotate(360deg); } }
+@keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
+
+/* ── Micro-interactions ───────────────────────── */
+.hover-lift { transition: transform 0.2s ease, box-shadow 0.2s ease; }
+.hover-lift:hover { transform: translateY(-4px); box-shadow: 0 12px 30px rgba(0,0,0,0.08); }

@@ -1,0 +1,42 @@
+[
+  {
+    "id": "fcf8180b-ce69-4ffe-bf97-bb4d0741bb6a",
+    "email": "wassupfari@gmail.com",
+    "name": "Faraj Arshad",
+    "avatar_url": "https://lh3.googleusercontent.com/a/ACg8ocLcOv7awwXVCc6gzIMmk3MhEhnSACYqJgPWYeyabD7UqL9ErTA=s96-c",
+    "password_hash": null,
+    "created_at": "2026-05-17T19:07:13.260390+00:00"
+  },
+  {
+    "id": "5e83a961-1984-493b-b2f1-850b7c96dd81",
+    "email": "faraj.arshad01@gmail.com",
+    "name": "Faraj Arshad  ok",
+    "avatar_url": "https://api.dicebear.com/7.x/avataaars/svg?seed=5e83a961-1984-493b-b2f1-850b7c96dd81",
+    "password_hash": null,
+    "created_at": "2026-05-30T20:34:36.721464+00:00"
+  },
+  {
+    "id": "cdeb36d2-f6fc-4f97-a014-5bf63e590d2d",
+    "email": "abdullah@gmail.com",
+    "name": "abdullah",
+    "avatar_url": null,
+    "password_hash": "$2b$12$zJl94Qb4ComcvOwaRSa9le9GRCCIWfSmGe/OOZA2TU4DbW3tfZx0C",
+    "created_at": "2026-06-01T06:04:32.110295+00:00"
+  },
+  {
+    "id": "aff14081-28a7-41db-a526-a7b8cd209e4c",
+    "email": "newuser@gmail.com",
+    "name": "New User",
+    "avatar_url": null,
+    "password_hash": "$2b$12$S2SCngg9F9QYgxsxeGiROOG91acI0GBmUdtaKxQQuON24MOSkDRYu",
+    "created_at": "2026-06-04T17:56:21.315514+00:00"
+  },
+  {
+    "id": "3da40368-3f25-4927-aa91-398aa1e5de35",
+    "email": "test@gmail.com",
+    "name": "Test User",
+    "avatar_url": null,
+    "password_hash": "$2b$12$XknNbf6.TVeyEE9zlmdLi.YZvp/j1Ny8bWP/WdLp6ez2fU6vFW9k2",
+    "created_at": "2026-06-04T18:06:18.773457+00:00"
+  }
+]

@@ -1,0 +1,191 @@
+/* =============================================
+   Sidebar — Styles
+   =============================================
+   Sage green vertical sidebar matching the
+   reference image layout.
+   ============================================= */
+
+/* =============================================
+   Sidebar — Styles (Floating Pill Theme)
+   ============================================= */
+
+.sidebar {
+  width: 240px;
+  height: calc(100vh - 40px);
+  background: linear-gradient(180deg, #4A7236 0%, #6EA451 40%, #4A7236 100%);
+  display: flex;
+  flex-direction: column;
+  padding: 24px 12px;
+  position: fixed;
+  left: 20px;
+  top: 20px;
+  bottom: 20px;
+  z-index: 200;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+  border-radius: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sidebar.collapsed {
+  width: 80px;
+  border-radius: 50px;
+}
+
+/* ── Logo ────────────────────────────────────── */
+.sidebar-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px;
+  margin-bottom: 24px;
+}
+
+.sidebar-logo-img {
+  width: 160px;
+  height: auto;
+  object-fit: contain;
+  filter: invert(1) hue-rotate(180deg) brightness(1.2);
+  mix-blend-mode: screen;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.sidebar-logo-collapsed-wrapper {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.sidebar-logo-img-collapsed {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 12px;
+}
+
+/* ── Collapse Button ─────────────────────────── */
+.sidebar-collapse-btn {
+  width: 24px;
+  height: 24px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  transition: all 0.2s;
+}
+
+.sidebar-collapse-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+/* ── Navigation ──────────────────────────────── */
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+}
+
+.sidebar-link {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 16px;
+  border-radius: 50px;
+  color: #ffffff; /* Pure white as requested */
+  font-size: 0.9375rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  border: none;
+  background: none;
+  width: 100%;
+  font-family: inherit;
+}
+
+.sidebar-link:hover {
+  color: white;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.sidebar-link.active {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  font-weight: 700;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar-link svg {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+}
+
+/* ── Footer / Logout ─────────────────────────── */
+.sidebar-footer {
+  margin-top: auto;
+  padding-top: 16px;
+}
+
+.sidebar-logout {
+  color: rgba(255, 255, 255, 0.6) !important;
+}
+
+.sidebar-logout:hover {
+  background: rgba(220, 38, 38, 0.15) !important;
+  color: #fca5a5 !important;
+}
+
+/* ── Collapsed State ─────────────────────────── */
+.sidebar.collapsed .sidebar-link {
+  justify-content: center;
+  padding: 12px;
+}
+
+.sidebar.collapsed .sidebar-link span,
+.sidebar.collapsed .sidebar-logo-text,
+.sidebar.collapsed .sidebar-link::after {
+  display: none;
+}
+
+.sidebar.collapsed .sidebar-logo {
+  justify-content: center;
+}
+
+/* ── Responsive ──────────────────────────────── */
+@media (max-width: 1000px) {
+  .sidebar {
+    left: 10px;
+    top: 10px;
+    bottom: 10px;
+    width: 80px;
+  }
+
+  .sidebar .sidebar-link span,
+  .sidebar .sidebar-logo-text {
+    display: none;
+  }
+
+  .sidebar .sidebar-link {
+    justify-content: center;
+    padding: 12px;
+  }
+
+  .sidebar .sidebar-logo {
+    justify-content: center;
+  }
+
+  .sidebar-collapse-btn {
+    display: none;
+  }
+}

@@ -1,0 +1,107 @@
+/* SettingsPage Styles */
+.settings-page { animation: fadeInUp 0.5s ease-out; max-width: 700px; }
+
+.settings-header { 
+  margin-bottom: 28px; 
+  display: flex; 
+  justify-content: space-between; 
+  align-items: flex-start;
+}
+
+.settings-header h1 { font-size: 1.75rem; font-weight: 800; color: var(--text-primary); margin-bottom: 4px; }
+.settings-header p { color: var(--text-muted); font-size: 0.9375rem; }
+
+.settings-save-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  background: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 0.875rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.settings-save-btn:hover:not(:disabled) {
+  background: var(--primary-hover);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-glow);
+}
+
+.settings-save-btn.success {
+  background: var(--status-deployed);
+}
+
+.settings-save-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.settings-section { background: var(--bg-card); border: 1px solid var(--border-default); border-radius: 16px; padding: 24px; margin-bottom: 20px; }
+.settings-section-title { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; color: var(--text-primary); }
+.settings-section-title h3 { font-size: 1rem; font-weight: 700; }
+.settings-section-desc { font-size: 0.8125rem; color: var(--text-light); margin-bottom: 20px; }
+
+.settings-fields { display: flex; flex-direction: column; gap: 12px; }
+.settings-field label { display: block; font-size: 0.75rem; font-weight: 600; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 6px; }
+.settings-key-display { display: flex; align-items: center; gap: 8px; padding: 12px 14px; background: var(--bg-main); border: 1px solid var(--border-default); border-radius: 10px; font-size: 0.8125rem; color: var(--text-muted); }
+.settings-badge { padding: 2px 10px; border-radius: 12px; font-size: 0.6875rem; font-weight: 700; text-transform: uppercase; margin-left: auto; }
+.settings-badge.live { background: var(--primary-light); color: var(--primary); }
+.settings-badge.demo { background: var(--status-draft-bg); color: var(--status-draft); }
+
+.settings-toggle-row { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+.settings-toggle-label { display: block; font-size: 0.9375rem; font-weight: 600; color: var(--text-primary); }
+.settings-toggle-desc { display: block; font-size: 0.8125rem; color: var(--text-light); margin-top: 2px; }
+.settings-toggle { width: 48px; height: 28px; background: var(--border-default); border: none; border-radius: 14px; cursor: pointer; position: relative; transition: background 0.2s; flex-shrink: 0; }
+.settings-toggle.on { background: var(--primary); }
+.settings-toggle-knob { position: absolute; top: 3px; left: 3px; width: 22px; height: 22px; background: white; border-radius: 50%; transition: transform 0.2s; box-shadow: 0 1px 3px rgba(0,0,0,0.15); }
+.settings-toggle.on .settings-toggle-knob { transform: translateX(20px); }
+
+.settings-theme-row { display: flex; gap: 20px; }
+.settings-theme-option { display: flex; flex-direction: column; align-items: center; gap: 10px; cursor: pointer; flex: 1; }
+.settings-theme-option span { font-size: 0.875rem; font-weight: 600; color: var(--text-muted); }
+.settings-theme-option.active span { color: var(--primary); }
+
+.settings-theme-preview { 
+  width: 100%; 
+  height: 80px; 
+  border-radius: 12px; 
+  border: 2.5px solid var(--border-default); 
+  transition: all 0.2s; 
+  position: relative;
+  overflow: hidden;
+  padding: 6px;
+  display: flex;
+  gap: 4px;
+}
+
+.settings-theme-preview .preview-sidebar { width: 20px; height: 100%; border-radius: 4px; opacity: 0.3; }
+.settings-theme-preview .preview-content { flex: 1; height: 100%; border-radius: 4px; opacity: 0.2; }
+
+.settings-theme-preview.light { background: #f8faf7; }
+.settings-theme-preview.light .preview-sidebar { background: var(--primary); }
+.settings-theme-preview.light .preview-content { background: var(--primary); }
+
+.settings-theme-preview.dark { background: #0c1208; }
+.settings-theme-preview.dark .preview-sidebar { background: var(--primary); }
+.settings-theme-preview.dark .preview-content { background: var(--primary); }
+
+.settings-theme-option.active .settings-theme-preview { 
+  border-color: var(--primary); 
+  box-shadow: 0 0 0 4px var(--primary-light); 
+}
+
+.spinner {
+  width: 16px;
+  height: 16px;
+  border: 2.5px solid rgba(255, 255, 255, 0.3);
+  border-top-color: white;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin { to { transform: rotate(360deg); } }
