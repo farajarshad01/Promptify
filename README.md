@@ -15,7 +15,7 @@ Promptify is a full-stack AI application that generates complete Shopify store b
 
 - **Frontend**: React (Vite), Lucide Icons, Vanilla CSS (Premium Sage Theme).
 - **Backend**: FastAPI, Uvicorn, Python.
-- **AI**: Google Gemini Pro (via `google-genai`).
+- **AI**: Google Gemini 2.5-flash (via `google-genai`).
 - **Database**: Supabase (PostgreSQL).
 - **Deployment**: Shopify GraphQL API.
 
